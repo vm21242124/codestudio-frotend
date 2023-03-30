@@ -35,7 +35,8 @@ const LoginPage = () => {
           </form>
           <NavLink>
             <p className="ln">Forgot Password</p>
-            <NavLink to="/register"></NavLink>
+          </NavLink>
+          <NavLink to="/register">
             <p className="ln">Not have an Account ? Register now</p>
           </NavLink>
         </div>

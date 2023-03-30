@@ -43,3 +43,20 @@ code {
 .ln{
   text-decoration: none;
 }
+.tbutton{
+  background-color: transparent;
+  outline: none;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.tbutton:hover{
+  border: 1px solid red;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}

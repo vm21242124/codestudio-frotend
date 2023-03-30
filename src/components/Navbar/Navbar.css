@@ -1,0 +1,26 @@
+.Navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: rgb(48, 48, 48);
+    color: white;
+    position: sticky;
+}
+.Navbar span:hover{
+    color: rgb(141, 255, 255);
+    text-decoration: underline;
+    cursor: pointer;
+}
+.l{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+}
+.r{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}

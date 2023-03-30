@@ -1,0 +1,15 @@
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.feature{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+.info{
+    width: 50%;
+}

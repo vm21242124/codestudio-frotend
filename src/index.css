@@ -60,3 +60,23 @@ code {
   background-color: white;
   color: black;
 }
+.numbered-textarea{
+  display: flex;
+  justify-content: space-around;
+}
+.edit{
+  resize: none;
+  width: 100%;
+  max-width: 100%;
+  outline: none;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  overflow-y: scroll;
+}
+.line-number{
+  background-color: rgb(32, 32, 32);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}

@@ -1,0 +1,22 @@
+.editor{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+}
+.editorside{
+    width: 50%;
+}
+
+.outputside{
+    width: 50%;
+}
+.de{
+    display: flex;
+    justify-content: space-around;
+
+}
+.runbtn{
+    display: flex;
+    width: 100%;
+    position: sticky;
+}

@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./LoginPage.css";
 
 const LoginPage = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
-    e.preventDefualt();
+    e.preventDefault();
+    console.log(email,password);
   };
   return (
     <div className="loginpage">
       <div className="container">
         <div className="left">
-          <h1 className="brand">VM2124</h1>
+          <h1 className="brand">VMstudio</h1>
           <p>code with vm2124 </p>
         </div>
         <div className="right">
@@ -20,15 +23,13 @@ const LoginPage = () => {
                 className="in1"
                 type="email"
                 placeholder="email"
-                name=""
-                id=""
+                onChange={(e) => setEmail(e.target.value)}
               />
               <input
                 className="in1"
                 type="password"
-                name=""
                 placeholder="password"
-                id=""
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <button className="lgbutton">Login</button>

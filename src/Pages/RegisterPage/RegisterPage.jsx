@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 const RegisterPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(fname,lname,email,mno,password,cpassword)
   };
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");

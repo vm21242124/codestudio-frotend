@@ -1,0 +1,17 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 30px;
+}
+.menu span{
+    margin: 10px;
+    cursor: pointer;
+}
+.menu span:hover{
+    color: rgb(177, 176, 255);
+    text-decoration: double;
+}

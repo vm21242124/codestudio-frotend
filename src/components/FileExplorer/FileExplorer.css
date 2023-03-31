@@ -1,0 +1,33 @@
+.explorer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+}
+.exp{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+.explorer span{
+    color: white;
+    font-size: 13px;
+    margin-top: 15px;
+    cursor: pointer;
+    margin: 5px;
+}
+.file{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(38, 38, 38);
+}
+.file span{
+    font-size: 16px;
+}
+.e{
+    display: flex;
+    align-items: center;
+}

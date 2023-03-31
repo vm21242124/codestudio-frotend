@@ -1,22 +1,36 @@
-.editor{
-    display: flex;
-    flex-direction: column;
-    height: 60vh;
+.editor {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
-.editorside{
-    width: 50%;
+.editorside {
+  width: 50%;
 }
-
-.outputside{
-    width: 50%;
+.filehandler{
+  display: flex;
+  background-color: black;
+  width: 15%;
+  
 }
-.de{
-    display: flex;
-    justify-content: space-around;
-
+.lefe{
+  display: flex;
+  width: 100%;
+  
 }
-.runbtn{
-    display: flex;
-    width: 100%;
-    position: sticky;
+.outputside {
+  width: 50%;
+}
+.de {
+  display: flex;
+  justify-content: space-around;
+}
+.runbtn {
+  display: flex;
+  width: 100%;
+  position: sticky;
+}
+.pallete{
+  height: 100%;
+  background-color: rgb(40, 40, 40);
+  width: 100%;
 }

@@ -23,12 +23,7 @@ const Editor = () => {
           <CodePallete/>
         </div>
       </div>
-      {/* <div className="de">
-        <div className="editorside">
-          <NumberedTextarea />
-        </div>
-        <div className="outputside"></div>
-      </div> */}
+
     </div>
   );
 };

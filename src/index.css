@@ -67,16 +67,19 @@ code {
 .edit{
   resize: none;
   width: 100%;
+  height: 95vh;
   max-width: 100%;
   outline: none;
   border: none;
   background-color: black;
   color: white;
   font-size: 16px;
-  overflow-y: scroll;
+ 
 }
 .line-number{
   background-color: rgb(32, 32, 32);
   color: rgb(255, 255, 255);
   font-size: 16px;
+  height: 95vh;
+  overflow:scroll ;
 }

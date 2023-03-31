@@ -2,15 +2,24 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height:  95vh;
+    height:  90vh;
     width: 100%;
     color: white;
 }
 .plate{
-    height: 95vh !important;
+    height:90vh !important;
     width: 100%;
 }
 .topmenufile{
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(26, 26, 26);
+    color: aqua;
+}
+.topmenufile span{
+    margin: 10px;
+    cursor: pointer;
 }

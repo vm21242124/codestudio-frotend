@@ -21,7 +21,7 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    adduser(password);
+    adduser(email);
   };
   return (
     <div className="loginpage">

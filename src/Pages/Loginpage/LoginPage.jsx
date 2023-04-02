@@ -1,13 +1,27 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./LoginPage.css";
+import { useDispatch } from "react-redux";
 
 const LoginPage = () => {
+  const dispatch=useDispatch();
+  const adduser=(user)=>{
+    dispatch({
+      type:"setuser",
+      payload:user
+    })
+  }
+  const removeuser =()=>{
+    dispatch({
+      type:'removeuser'
+    })
+  }
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email,password);
+
+    adduser(password);
   };
   return (
     <div className="loginpage">
@@ -34,6 +48,7 @@ const LoginPage = () => {
             </div>
             <button className="lgbutton">Login</button>
           </form>
+            <button onClick={removeuser}>logout</button>
           <NavLink>
             <p className="ln">Forgot Password</p>
           </NavLink>

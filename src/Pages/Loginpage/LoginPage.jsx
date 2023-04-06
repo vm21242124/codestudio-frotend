@@ -2,25 +2,34 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./LoginPage.css";
 import { useDispatch } from "react-redux";
+import axios from "axios";
 
 const LoginPage = () => {
-  const dispatch=useDispatch();
-  const adduser=(user)=>{
+  const dispatch = useDispatch();
+  const adduser = (user) => {
     dispatch({
-      type:"setuser",
-      payload:user
-    })
-  }
-  const removeuser =()=>{
+      type: "setuser",
+      payload: user,
+    });
+  };
+  const removeuser = () => {
     dispatch({
-      type:'removeuser'
-    })
-  }
+      type: "removeuser",
+    });
+  };
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios
+      .get("http://localhost:5000/auth/login", { email:email, password:password})
+      .then((res)=>{
+        if(res.status===200){
+          alert("user logged in")
+        }
 
+      })
+      .catch((e) => console.log(e));
     adduser(email);
   };
   return (
@@ -48,7 +57,6 @@ const LoginPage = () => {
             </div>
             <button className="lgbutton">Login</button>
           </form>
-            <button onClick={removeuser}>logout</button>
           <NavLink>
             <p className="ln">Forgot Password</p>
           </NavLink>

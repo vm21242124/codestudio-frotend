@@ -1,30 +1,33 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
+import { useSelector } from "react-redux";
+import { snippet } from "../../tempdata/snippets.js";
 
 function NumberedTextarea() {
-  const [lines, setLines] = useState([]);
-  const textareaRef = useRef(null);
+  const lang = useSelector((state) => state.user.language);
+  let def = "";
+  switch (lang) {
+    case "cpp":
+      def = snippet.cpp;
+      break;
+    case "java":
+      def = snippet.java;
+      break;
 
-  useEffect(() => {
-    const textarea = textareaRef.current;
-    const updateLines = () => {
-      const lines = textarea.value.split("\n");
-      setLines(lines);
-    };
-    updateLines();
-    textarea.addEventListener("input", updateLines);
-    return () => {
-      textarea.removeEventListener("input", updateLines);
-    };
-  }, []);
+    case "python":
+      def = snippet.python;
+      break;
+
+    case "c":
+      def = snippet.c;
+      break;
+    default:
+      def = "java";
+      break;
+  }
 
   return (
     <div className="numbered-textarea">
-      <div className="line-number">
-        {lines.map((line, index) => (
-          <div key={index}>{index + 1}~</div>
-        ))}
-      </div>
-      <textarea className="edit" ref={textareaRef} />
+      <textarea value={def}  className="edit"/>
     </div>
   );
 }
